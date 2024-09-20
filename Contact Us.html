@@ -9,7 +9,7 @@
 <body>
     <!-- Header Section -->
     <header>
-        <div class="logo">Logo</div>
+        <div class="logo">Villo Events</div>
         <nav>
             <ul>
                 <li><a href="Home Page.html">Home</a></li>
@@ -19,13 +19,13 @@
                 <li><a href="Blog.html">Blog</a></li>
                 <li><a href="Contact Us.html">Contact Us</a></li>
                 <li><a href="About Us.html">About Us</a></li>
-                <li><a href="FAQs">FAQs</a></li>
+                <li><a href="FAQs.html">FAQs</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <div class="contact-Container">
-            <section class="get-in-touch">
+            <section id="get-in-touch">
                 <h3>Get in touch with us via</h3>
                 <h4>Admin</h4>
                 <p>Email:villoadmin@gmail.com</p>
@@ -38,31 +38,33 @@
                 <p>Khomasdal</p>
                 <p>Windhoek, Namibia</p>
             </section>
-            <section class="form">
-                <form action="">
-                    
-                </form>
+            <section class="contact-form">
                 <fieldset>
-                    <legend>User Details</legend>
-                    <label for="firstname">FirstName*</label>
-                    <input type="text" id="firstname" name="firstname" required> <br>
-                
-                    <label for="lastname">LastName*</label>
-                    <input type="text" id="lastname" name="lastname" required> <br>
+                <form action="submit"method="post">
+                    <fieldset>
+                        <legend>User Details</legend>
+                        <label for="firstname">FirstName*</label>
+                        <input type="text" id="firstname" name="firstname" required> <br>
                     
-                    <label for="email">Email</label> <br>
-                    <input type="email" id="email" name="email" required> <br>
+                        <label for="lastname">LastName*</label>
+                        <input type="text" id="lastname" name="lastname" required> <br>
+                        
+                        <label for="email">Email</label> <br>
+                        <input type="email" id="email" name="email" required> <br>
+                    </fieldset>
+                <fieldset>
+                        <legend>Message</legend>
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject"> <br>
+                        
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="4"></textarea><br>
+                        
+                        <button type="submit">Submit</button>
+                    </fieldset>
+                </form>
                 </fieldset>
-            <fieldset>
-                    <legend>Message</legend>
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject"> <br>
-                    
-                    <label for="message">Your Message</label>
-                    <textarea id="message" name="message" rows="4"></textarea><br>
-                    
-                    <button type="submit">Submit</button>
-                </fieldset>
+               
             </section>
 
         </div>
@@ -84,9 +86,9 @@
             <div class="connect-with-us">
                 <h3>Connect with Us</h3>
                 <div class="social-icons">
-                    <a href="https://www.instagram.com/_chess_v.ctor_/">[Icon 1]</a>
-                    <a href="#">[Icon 2]</a>
-                    <a href="#">[Icon 3]</a>
+                    <a href="https://www.instagram.com/_chess_v.ctor_/">instagram</a>
+                    <a href="#">facebook</a>
+                    <a href="#">twitter</a>
                 </div>
             </div>
         </div> <hr>
