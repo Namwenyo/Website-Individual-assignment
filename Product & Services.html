@@ -10,20 +10,31 @@
     <header>
         <div class="logo">Villo Events</div>
         <nav>
-            <ul>
-                <li><a href="Home Page.html">Home</a></li>
+           <ul>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="Product & Services.html">Product & Services</a></li>
                 <li><a href="Gallery.html">Gallery</a></li>
                 <li><a href="Testimonials.html">Testimonials</a></li>
-                <li><a href="Blog.html">Blog</a></li>
                 <li><a href="Contact Us.html">Contact Us</a></li>
                 <li><a href="About Us.html">About Us</a></li>
-                <li><a href="FAQs.html">FAQs</a></li>
             </ul>
         </nav>
     </header>
-
+    
     <main>
+        <div class="booking-btn-container">
+            <h3>Make a rental quotation</h3>
+            <a href="https:" class="booking-btn" target="_blank">Book Now</a>
+        </div>
+        <div id="cart">
+            <h3>Your Cart (<span id="item-count">0</span> items)</h3>
+            <button id="toggle-cart">View Cart</button>
+            <div id="cart-content" style="display: none;">
+                <ul id="cart-items"></ul>
+                <p>Total: N$ <span id="total-price">0.00</span></p>
+                <button id="checkout">Checkout</button>
+            </div>
+        </div>
         <div class="shop-services-container">
         <section class="products-section">
             <h1>Our Products</h1>
@@ -40,399 +51,405 @@
             <div class="product-grid">
                 <div class="product">
                     <img src="pictures/frower/Birthday 1.jpg" alt="Flower Set">
-                    <p>Flower Set 16</p>
-                    <p>$25</p>
-                    <button>Add to Cart</button>
+                    <p>Birthday Flower Set 16</p>
+                    <p>N$80.00</p>
+                    <button data-name="Birthday Flower Set 16" data-price="80.00" data-image="pictures/frower/Birthday 1.jpg">Add to Cart</button>
                 </div>
                 <div class="product">
-                    <img src="pictures/frower/flower2.jpeg" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
+                    <img src="pictures/frower/flower2.jpeg" alt="Backdrop flower">
+                    <p>Backdrop flower</p>
+                    <p>N$200.00</p>
+                    <button data-name="Backdrop flower" data-price="200.00" data-image="pictures/frower/flower2.jpeg">Add to Cart</button>
                 </div>
                 <div class="product">
-                    <img src="pictures/frower/flower3.jpeg" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
+                    <img src="pictures/frower/flower3.jpeg" alt="Gift flower set">
+                    <p>Gift flower set 1</p>
+                    <p>N$150.00</p>
+                    <button data-name="Gift flower set 1" data-price="150.00" data-image="pictures/frower/flower3.jpeg">Add to Cart</button>
                 </div>
                 <div class="product">
-                    <img src="pictures/frower/flower4.jpeg" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
+                    <img src="pictures/frower/flower4.jpeg" alt="Gifting flowers">
+                    <p>Gifting flowers, green-purple</p>
+                    <p>N$150.00</p>
+                    <button data-name="Gifting flowers, green-purple" data-price="150.00" data-image="pictures/frower/flower4.jpeg">Add to Cart</button>
                 </div>
                 <div class="product">
-                    <img src="pictures/frower/sticker1.jpeg" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
-                </div> 
-                <div class="product">
-                    <img src="pictures//frower/flower5.jpeg" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
-                </div> 
-                <div class="product">
-                    <img src="pictures//frower/birthday 2.jpg" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
-                </div> 
-                <div class="product">
-                    <img src="pictures//frower/birthday 4.jpg" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
+                    <img src="pictures/frower/sticker1.jpeg" alt="Wedding Sticker">
+                    <p>Wedding Sticker</p>
+                    <p>N$300.00</p>
+                    <button data-name="Wedding Sticker" data-price="300.00" data-image="pictures/frower/sticker1.jpeg">Add to Cart</button>
                 </div>
                 <div class="product">
-                    <img src="pictures//frower/birthday 5.jpg" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
-                </div>
-
-                <div class="product">
-                    <img src="pictures//frower/birthday3.jpg" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
+                    <img src="pictures/frower/flower5.jpeg" alt="Table Flowers">
+                    <p>Table Flowers, white</p>
+                    <p>N$250.00</p>
+                    <button data-name="Table Flowers, white" data-price="250.00" data-image="pictures/frower/flower5.jpeg">Add to Cart</button>
                 </div>
                 <div class="product">
-                    <img src="pictures//frower/caddle1.jpg" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
+                    <img src="pictures/frower/birthday 2.jpg" alt="Table Flowers">
+                    <p>Table Flowers, white-purple</p>
+                    <p>N$260.99</p>
+                    <button data-name="Table Flowers, white-purple" data-price="260.99" data-image="pictures/frower/birthday 2.jpg">Add to Cart</button>
                 </div>
                 <div class="product">
-                    <img src="pictures//frower/candle2.jpg" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
+                    <img src="pictures/frower/birthday 4.jpg" alt="Table Flowers">
+                    <p>Table Flowers, yellow-blue</p>
+                    <p>N$260.00</p>
+                    <button data-name="Table Flowers, yellow-blue" data-price="260.00" data-image="pictures/frower/birthday 4.jpg">Add to Cart</button>
                 </div>
                 <div class="product">
-                    <img src="pictures//frower/candle3.jpg" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
+                    <img src="pictures/frower/birthday 5.jpg" alt="Birthday Flower Set">
+                    <p>Birthday Flower set, white</p>
+                    <p>N$100.00</p>
+                    <button data-name="Birthday Flower set, white" data-price="100.00" data-image="pictures/frower/birthday 5.jpg">Add to Cart</button>
                 </div>
                 <div class="product">
-                    <img src="pictures//frower/christmas1.jpg" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
+                    <img src="pictures/frower/birthday3.jpg" alt="Birthday Bucket">
+                    <p>Birthday Bucket</p>
+                    <p>N$300.00</p>
+                    <button data-name="Birthday Bucket" data-price="300.00" data-image="pictures/frower/birthday3.jpg">Add to Cart</button>
                 </div>
                 <div class="product">
-                    <img src="pictures//frower/christmas2.jpg" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
+                    <img src="pictures/frower/candle1.jpg" alt="Candle Set">
+                    <p>Candle set of 10 #001</p>
+                    <p>N$500.00</p>
+                    <button data-name="Candle set of 10 #001" data-price="500.00" data-image="pictures/frower/candle1.jpg">Add to Cart</button>
                 </div>
                 <div class="product">
-                    <img src="pictures/frower/funeral 3.jpg" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
+                    <img src="pictures/frower/candle2.jpg" alt="Candle Set">
+                    <p>Candle set of 10 #002</p>
+                    <p>N$450.00</p>
+                    <button data-name="Candle set of 10 #002" data-price="450.00" data-image="pictures/frower/candle2.jpg">Add to Cart</button>
                 </div>
                 <div class="product">
-                    <img src="pictures//frower/funeral 4.jpg" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
+                    <img src="pictures/frower/candle3.jpg" alt="Candle Set">
+                    <p>Candle set of 10 #003</p>
+                    <p>N$400.00</p>
+                    <button data-name="Candle set of 10 #003" data-price="400.00" data-image="pictures/frower/candle3.jpg">Add to Cart</button>
                 </div>
                 <div class="product">
-                    <img src="pictures/frower/funeral candle1.jpg" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
+                    <img src="pictures/frower/christmas1.jpg" alt="Decorative Flower">
+                    <p>Decorative Flower #001</p>
+                    <p>N$290.99</p>
+                    <button data-name="Decorative Flower #001" data-price="290.99" data-image="pictures/frower/christmas1.jpg">Add to Cart</button>
                 </div>
                 <div class="product">
-                    <img src="pictures/frower/funeral candle2.jpg" alt="Flower Set">
-                    <p>Flower Set 16</p>
-                    <p>$25</p>
-                    <button>Add to Cart</button>
+                    <img src="pictures/frower/christmas2.jpg" alt="Decorative Flower">
+                    <p>Decorative Flower #002</p>
+                    <p>N$17.00</p>
+                    <button data-name="Decorative Flower #002" data-price="17.00" data-image="pictures/frower/christmas2.jpg">Add to Cart</button>
                 </div>
                 <div class="product">
-                    <img src="pictures/frower/funeral.jpg" alt="Flower Set">
-                    <p>Flower Set 16</p>
-                    <p>$25</p>
-                    <button>Add to Cart</button>
+                    <img src="pictures/frower/funeral 3.jpg" alt="Funeral Flower">
+                    <p>Funeral Flower 10s</p>
+                    <p>N$50.00</p>
+                    <button data-name="Funeral Flower 10s" data-price="50.00" data-image="pictures/frower/funeral 3.jpg">Add to Cart</button>
                 </div>
                 <div class="product">
-                    <img src="pictures/frower/funeral5.jpg" alt="Flower Set">
-                    <p>Flower Set 16</p>
-                    <p>$25</p>
-                    <button>Add to Cart</button>
+                    <img src="pictures/frower/funeral 4.jpg" alt="Funeral Flower Set">
+                    <p>Funeral Flower Set of 15</p>
+                    <p>N$600.00</p>
+                    <button data-name="Funeral Flower Set of 15" data-price="600.00" data-image="pictures/frower/funeral 4.jpg">Add to Cart</button>
                 </div>
                 <div class="product">
-                    <img src="pictures/frower/sticker 3.jpg" alt="Flower Set">
-                    <p>Flower Set 16</p>
-                    <p>$25</p>
-                    <button>Add to Cart</button>
+                    <img src="pictures/frower/funeral candle1.jpg" alt="Funeral Candle Set">
+                    <p>Funeral Candle 15s</p>
+                    <p>N$1500.00</p>
+                    <button data-name="Funeral Candle 15s" data-price="1500.00" data-image="pictures/frower/funeral candle1.jpg">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="pictures/frower/funeral candle2.jpg" alt="Funeral Candle Set">
+                    <p>Funeral Candle 10s Set</p>
+                    <p>N$2000.00</p>
+                    <button data-name="Funeral Candle 10s Set" data-price="2000.00" data-image="pictures/frower/funeral candle2.jpg">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="pictures/frower/funeral.jpg" alt="Funeral Flower">
+                    <p>Funeral Flower #008</p>
+                    <p>N$250.00</p>
+                    <button data-name="Funeral Flower #008" data-price="250.00" data-image="pictures/frower/funeral.jpg">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="pictures/frower/funeral5.jpg" alt="Funeral Flower">
+                    <p>Funeral Flower #009</p>
+                    <p>N$340.00</p>
+                    <button data-name="Funeral Flower #009" data-price="340.00" data-image="pictures/frower/funeral5.jpg">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="pictures/frower/sticker 3.jpg" alt="Wedding Sticker">
+                    <p>Wedding Sticker #12</p>
+                    <p>N$25.00</p>
+                    <button data-name="Wedding Sticker #12" data-price="25.00" data-image="pictures/frower/sticker 3.jpg">Add to Cart</button>
                 </div>
                 <div class="product">
                     <img src="pictures/frower/sticker2.jpg" alt="Flower Set">
                     <p>Flower Set 16</p>
-                    <p>$25</p>
-                    <button>Add to Cart</button>
+                    <p>N$35</p>
+                    <button data-name="Flower Set 16" data-price="35" data-image="pictures/frower/sticker2.jpg">Add to Cart</button>
                 </div>
                 <div class="product">
                     <img src="pictures/frower/sticker4.jpg" alt="Flower Set">
                     <p>Flower Set 16</p>
-                    <p>$25</p>
-                    <button>Add to Cart</button>
+                    <p>N$42</p>
+                    <button data-name="Flower Set 16" data-price="42" data-image="pictures/frower/sticker4.jpg">Add to Cart</button>
                 </div>
                 <div class="product">
                     <img src="pictures/frower/valentine1.jpg" alt="Flower Set">
                     <p>Flower Set 16</p>
-                    <p>$25</p>
-                    <button>Add to Cart</button>
+                    <p>N$29</p>
+                    <button data-name="Flower Set 16" data-price="29" data-image="pictures/frower/valentine1.jpg">Add to Cart</button>
                 </div>
                 <div class="product">
                     <img src="pictures/frower/valentine2.jpg" alt="Flower Set">
                     <p>Flower Set 16</p>
-                    <p>$25</p>
-                    <button>Add to Cart</button>
-                </div>
-                      
+                    <p>N$37</p>
+                    <button data-name="Flower Set 16" data-price="37" data-image="pictures/frower/valentine2.jpg">Add to Cart</button>
+                </div>      
             </div>
             <h4>for rent</h4>
             <div class="rental-grid">
                 <div class="product">
                     <img src="pictures/rental/rental1.jpg" alt="Flower Set">
                     <p>Flower Set 16</p>
-                    <p>$25</p>
-                    <button>Add to Cart</button>
+                    <p>N$45</p>
+                    <button data-name="Flower Set 16" data-price="45" data-image="pictures/rental/rental1.jpg">Add to Cart</button>
                 </div>
                 <div class="product">
-                    <img src="pictures/rental/rental2.jpg" alt="Sticker Set">
+                    <img src="pictures/rental/rental2.jpg" alt="Frame tent 15/30">
                     <p>Frame tent 15/30</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
+                    <p>N$150</p>
+                    <button data-name="Frame tent 15/30" data-price="150" data-image="pictures/rental/rental2.jpg">Add to Cart</button>
                 </div>
                 <div class="product">
                     <img src="pictures/rental/rental3.jpg" alt="Sticker Set">
                     <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
+                    <p>N$20</p>
+                    <button data-name="Sticker Set 5" data-price="20" data-image="pictures/rental/rental3.jpg">Add to Cart</button>
                 </div>
                 <div class="product">
                     <img src="pictures/rental/rental5.jpg" alt="Sticker Set">
                     <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
+                    <p>N$22</p>
+                    <button data-name="Sticker Set 5" data-price="22" data-image="pictures/rental/rental5.jpg">Add to Cart</button>
                 </div>
                 <div class="product">
                     <img src="pictures/rental/rental6.jpg" alt="Sticker Set">
                     <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
-                </div> 
-                <div class="product">
-                    <img src="pictures/rental/bufferware.png" alt="Sticker Set">
-                    <p>bufferware</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
-                </div>  
-                <div class="product">
-                    <img src="pictures/rental/double rock glass.png" alt="Sticker Set">
-                    <p>double rock glass</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
-                </div> 
-                <div class="product">
-                    <img src="pictures/rental/nkife.png" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
-                </div> 
-                <div class="product">
-                    <img src="pictures/rental/mat1.jpg" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
-                </div> 
-                <div class="product">
-                    <img src="pictures/rental/mat2.jpg" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
+                    <p>N$18</p>
+                    <button data-name="Sticker Set 5" data-price="18" data-image="pictures/rental/rental6.jpg">Add to Cart</button>
                 </div>
                 <div class="product">
-                    <img src="pictures/rental/mat3.jpg" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
+                    <img src="pictures/rental/bufferware.png" alt="Bufferware">
+                    <p>Bufferware</p>
+                    <p>N$75</p>
+                    <button data-name="Bufferware" data-price="75" data-image="pictures/rental/bufferware.png">Add to Cart</button>
                 </div>
                 <div class="product">
-                    <img src="pictures/rental/groom chair1.jpg" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
+                    <img src="pictures/rental/double rock glass.png" alt="Double Rock Glass">
+                    <p>Double Rock Glass</p>
+                    <p>N$35</p>
+                    <button data-name="Double Rock Glass" data-price="35" data-image="pictures/rental/double rock glass.png">Add to Cart</button>
                 </div>
                 <div class="product">
-                    <img src="pictures/rental/brride groom chair1.jpg" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
+                    <img src="pictures/rental/nkife.png" alt="Knife Set">
+                    <p>Knife Set</p>
+                    <p>N$25</p>
+                    <button data-name="Knife Set" data-price="25" data-image="pictures/rental/nkife.png">Add to Cart</button>
                 </div>
                 <div class="product">
-                    <img src="pictures/rental/wedding chair1.jpg" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
+                    <img src="pictures/rental/mat1.jpg" alt="Mat Set">
+                    <p>Mat Set</p>
+                    <p>N$60</p>
+                    <button data-name="Mat Set" data-price="60" data-image="pictures/rental/mat1.jpg">Add to Cart</button>
                 </div>
                 <div class="product">
-                    <img src="pictures/rental/wedding chair2.jpg" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
+                    <img src="pictures/rental/mat2.jpg" alt="Mat Set">
+                    <p>Mat Set</p>
+                    <p>N$65</p>
+                    <button data-name="Mat Set" data-price="65" data-image="pictures/rental/mat2.jpg">Add to Cart</button>
                 </div>
                 <div class="product">
-                    <img src="pictures/rental/wedding chair3.jpg" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
+                    <img src="pictures/rental/mat3.jpg" alt="Mat Set">
+                    <p>Mat Set</p>
+                    <p>N$70</p>
+                    <button data-name="Mat Set" data-price="70" data-image="pictures/rental/mat3.jpg">Add to Cart</button>
                 </div>
                 <div class="product">
-                    <img src="pictures/rental/wedding chair 4.jpg" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
+                    <img src="pictures/rental/groom chair1.jpg" alt="Groom Chair">
+                    <p>Groom Chair</p>
+                    <p>N$80</p>
+                    <button data-name="Groom Chair" data-price="80" data-image="pictures/rental/groom chair1.jpg">Add to Cart</button>
                 </div>
                 <div class="product">
-                    <img src="pictures/rental/wedding chair 5.jpg" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
+                    <img src="pictures/rental/brride groom chair1.jpg" alt="Bride & Groom Chair">
+                    <p>Bride & Groom Chair</p>
+                    <p>N$120</p>
+                    <button data-name="Bride & Groom Chair" data-price="120" data-image="pictures/rental/brride groom chair1.jpg">Add to Cart</button>
                 </div>
                 <div class="product">
-                    <img src="pictures/rental/chafing dish.jpg" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
+                    <img src="pictures/rental/wedding chair1.jpg" alt="Wedding Chair">
+                    <p>Wedding Chair</p>
+                    <p>N$150</p>
+                    <button data-name="Wedding Chair" data-price="150" data-image="pictures/rental/wedding chair1.jpg">Add to Cart</button>
                 </div>
                 <div class="product">
-                    <img src="pictures/rental/chafing dish1.jpg" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
+                    <img src="pictures/rental/wedding chair2.jpg" alt="Wedding Chair">
+                    <p>Wedding Chair</p>
+                    <p>N$155</p>
+                    <button data-name="Wedding Chair" data-price="155" data-image="pictures/rental/wedding chair2.jpg">Add to Cart</button>
                 </div>
                 <div class="product">
-                    <img src="pictures/rental/chafing dish 2.jpg" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
+                    <img src="pictures/rental/wedding chair3.jpg" alt="Wedding Chair">
+                    <p>Wedding Chair</p>
+                    <p>N$175</p>
+                    <button data-name="Wedding Chair" data-price="175" data-image="pictures/rental/wedding chair3.jpg">Add to Cart</button>
                 </div>
                 <div class="product">
-                    <img src="pictures/rental/chafing dish3.jpg" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
+                    <img src="pictures/rental/wedding chair 4.jpg" alt="Wedding Chair">
+                    <p>Wedding Chair</p>
+                    <p>N$180</p>
+                    <button data-name="Wedding Chair" data-price="180" data-image="pictures/rental/wedding chair 4.jpg">Add to Cart</button>
                 </div>
                 <div class="product">
-                    <img src="pictures/rental/spoon1.jpg" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
+                    <img src="pictures/rental/wedding chair 5.jpg" alt="Wedding Chair">
+                    <p>Wedding Chair</p>
+                    <p>N$190</p>
+                    <button data-name="Wedding Chair" data-price="190" data-image="pictures/rental/wedding chair 5.jpg">Add to Cart</button>
                 </div>
                 <div class="product">
-                    <img src="pictures/rental/spoon2.jpg" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
+                    <img src="pictures/rental/chafing dish.jpg" alt="Chafing Dish">
+                    <p>Chafing Dish</p>
+                    <p>N$220</p>
+                    <button data-name="Chafing Dish" data-price="220" data-image="pictures/rental/chafing dish.jpg">Add to Cart</button>
                 </div>
                 <div class="product">
-                    <img src="pictures/rental/spoon3.jpg" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
+                    <img src="pictures/rental/chafing dish1.jpg" alt="Chafing Dish">
+                    <p>Chafing Dish</p>
+                    <p>N$230</p>
+                    <button data-name="Chafing Dish" data-price="230" data-image="pictures/rental/chafing dish1.jpg">Add to Cart</button>
                 </div>
                 <div class="product">
-                    <img src="pictures/rental/spoon4.jpg" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
+                    <img src="pictures/rental/chafing dish 2.jpg" alt="Chafing Dish">
+                    <p>Chafing Dish</p>
+                    <p>N$240</p>
+                    <button data-name="Chafing Dish" data-price="240" data-image="pictures/rental/chafing dish 2.jpg">Add to Cart</button>
                 </div>
                 <div class="product">
-                    <img src="pictures/rental/salad tongs.png" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
-                </div> 
+                    <img src="pictures/rental/chafing dish3.jpg" alt="Chafing Dish">
+                    <p>Chafing Dish</p>
+                    <p>N$250</p>
+                    <button data-name="Chafing Dish" data-price="250" data-image="pictures/rental/chafing dish3.jpg">Add to Cart</button>
+                </div>
                 <div class="product">
-                    <img src="pictures/rental/serving dish.jpg" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
-                </div> 
+                    <img src="pictures/rental/spoon1.jpg" alt="Spoon Set">
+                    <p>Spoon Set</p>
+                    <p>N$35</p>
+                    <button data-name="Spoon Set" data-price="35" data-image="pictures/rental/spoon1.jpg">Add to Cart</button>
+                </div>
                 <div class="product">
-                    <img src="pictures/rental/serving dish2.jpg" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
-                </div> 
+                    <img src="pictures/rental/spoon2.jpg" alt="Spoon Set">
+                    <p>Spoon Set</p>
+                    <p>N$38</p>
+                    <button data-name="Spoon Set" data-price="38" data-image="pictures/rental/spoon2.jpg">Add to Cart</button>
+                </div>
                 <div class="product">
-                    <img src="pictures/rental/whiskey glass.png" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
-                </div> 
+                    <img src="pictures/rental/spoon3.jpg" alt="Spoon Set">
+                    <p>Spoon Set</p>
+                    <p>N$40</p>
+                    <button data-name="Spoon Set" data-price="40" data-image="pictures/rental/spoon3.jpg">Add to Cart</button>
+                </div>
                 <div class="product">
-                    <img src="pictures/rental/wine buctet.png" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
-                </div> 
+                    <img src="pictures/rental/spoon4.jpg" alt="Spoon Set">
+                    <p>Spoon Set</p>
+                    <p>N$45</p>
+                    <button data-name="Spoon Set" data-price="45" data-image="pictures/rental/spoon4.jpg">Add to Cart</button>
+                </div>
                 <div class="product">
-                    <img src="pictures/rental/" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
-                </div> 
+                    <img src="pictures/rental/salad tongs.png" alt="Salad Tongs">
+                    <p>Salad Tongs</p>
+                    <p>N$25</p>
+                    <button data-name="Salad Tongs" data-price="25" data-image="pictures/rental/salad tongs.png">Add to Cart</button>
+                </div>
                 <div class="product">
-                    <img src="pictures/flower5.jpeg" alt="Sticker Set">
-                    <p>Sticker Set 5</p>
-                    <p>$15</p>
-                    <button>Add to Cart</button>
-                </div> 
-                      
+                    <img src="pictures/rental/serving dish.jpg" alt="Serving Dish">
+                    <p>Serving Dish</p>
+                    <p>N$60</p>
+                    <button data-name="Serving Dish" data-price="60" data-image="pictures/rental/serving dish.jpg">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="pictures/rental/serving dish2.jpg" alt="Serving Dish">
+                    <p>Serving Dish</p>
+                    <p>N$65</p>
+                    <button data-name="Serving Dish" data-price="65" data-image="pictures/rental/serving dish2.jpg">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="pictures/rental/whiskey glass.png" alt="Whiskey Glass">
+                    <p>Whiskey Glass</p>
+                    <p>N$50</p>
+                    <button data-name="Whiskey Glass" data-price="50" data-image="pictures/rental/whiskey glass.png">Add to Cart</button>
+                </div>     
             </div>
             </section>
         </div>
         
 
-        <section class="services-section">
+        <section class="services-section" style="text-align: center;">
             <h1>Our Services</h1>
             <div class="services-list">
                 <div class="service">
                     <h2>Wedding Planning</h2>
                     <p>We offer full wedding planning services, including decor, catering, and more.</p>
                     <p>Price: Ranges from N$1000.00</p>
-                    <button>Request a Quotation</button>
+                    <button onclick="openModal('Wedding Planning')">Request a Quotation</button>
                 </div>
                 <div class="service">
                     <h2>Corporate Event Planning</h2>
                     <p>From small gatherings to large conferences, we manage it all.</p>
                     <p>Price: Ranges from N$800.00</p>
-                    <button>Request a Quotation</button>
+                    <button onclick="openModal('Corporate Event Planning')">Request a Quotation</button>
                 </div>
                 <div class="service">
                     <h2>Personal Events</h2>
-                    <p>We offer personalised and affordable options for small events such as birthdays, anniversaries, familly reunions amd more tailored to your unique vision.</p>
+                    <p>We offer personalised and affordable options for small events such as birthdays, anniversaries, family reunions, and more tailored to your unique vision.</p>
                     <p>Price: Ranges from N$500.00</p>
-                    <button>Request a Quotation</button>
+                    <button onclick="openModal('Personal Events')">Request a Quotation</button>
                 </div>
                 <div class="service">
-                    <h2>Drapping</h2>
-                    <p>hhjhb hkkhmm mn km mn kjk</p>
+                    <h2>Draping</h2>
+                    <p>We provide high-quality draping services for all types of events.</p>
                     <p>Price: Ranges from N$1000.00</p>
-                    <button>Request a Quotation</button>
+                    <button onclick="openModal('Draping')">Request a Quotation</button>
                 </div>
-                
             </div>
         </section>
+        <div id="quotationModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Request a Quotation</h2>
+                <form id="quotationForm">
+                    <div class="form-group">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Required:</label>
+                        <input type="text" id="service" name="service" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="details">Additional Details:</label>
+                        <textarea id="details" name="details" rows="4"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
     </main>
 
     <footer>
@@ -461,5 +478,6 @@
             <p>© 2024 developed by _Komboni_boy_</p>
         </div>
     </footer>
+    <script src="villo.js"></script>
 </body>
 </html>
